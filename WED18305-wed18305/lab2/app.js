@@ -1,5 +1,4 @@
-let root1;
-let root2;
+
 
 let a = prompt("nhap a");
 let a1 = parseFloat(a);
