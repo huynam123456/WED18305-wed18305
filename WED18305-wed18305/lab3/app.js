@@ -1,18 +1,21 @@
 do {
-    let a = prompt(parseInt(a));
-    alert("1 tính trung bình điểm ");
-    alert("2 tinh trung bình điểm");
-    alert("3 thoat");
-
-    switch (a) {
-        case 1:
-            console.log("tính điểm trung bình");
-    let a = prompt(" nhap toán "+parseFloat(a));
-    let b = prompt(" nhap hóa"+ parseFloat(b));
-    let c = prompt(" nhap lý"+  parseFloat(c));
-    let d = prompt(" nhâp sinh"+  parseFloat(d))
     
-    let tb= (a+b+c+b)/4;
+    
+   
+    let l = prompt(" trương trình 1 tính trung bình cộng 2 tinh trung bình cộng 3 thoát chon truong trình");
+
+    switch (l) {
+        case 1:      
+    let a = prompt(" nhap toán ");
+    let a1 = parseFloat(a);
+    let b = prompt(" nhap hóa");
+    let b1 = parseFloat(b);
+    let c = prompt(" nhap lý");
+    let c1= parseFloat(c);
+    let d = prompt(" nhâp sinh");
+    let d1 = parseFloat(d);
+    
+    var tb= (a+b+c+b)/4;
     
     
             switch (tb) {
@@ -31,6 +34,7 @@ do {
     
                     break;
             }
+            document.write(tb);
             
             break;
              case 2: 
@@ -55,6 +59,9 @@ do {
              }else{
                 console.log("yếu")
              }
+
+              
+             break ;
     
         default:
             console.log("thoát");
