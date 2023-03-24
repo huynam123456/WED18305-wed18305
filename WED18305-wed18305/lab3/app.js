@@ -34,12 +34,10 @@ do {
     
                     break;
             }
-            document.write(tb);
-            
-            break;
+
              case 2: 
     
-              console.log("tính điểm trung bình" );
+              
              let toan = prompt(" nhap toán "+ parseFloat (toan));
              let hoa= prompt(" nhap hóa" +parseFloat (hoa));
              let ly = prompt(" nhap lý" +parseFloat (ly));
