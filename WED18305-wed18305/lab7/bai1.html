@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrapper{
+        width: 50%;  
+      background-color: yellow ;
+      text-align: center;
+      padding-left: 50px;
+      font-family: 'Courier New', Courier, monospace;
+   
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+
+    }
+    .main{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+    .rightc{
+    padding: 10px;
+   float: right;
+   margin: auto;
+
+   
+    }
+    .righc{
+        width: 150px;
+        height: 270px;
+        display: flex;
+        border: 1px solid red;  
+        text-align: center;
+    }
+    .item{
+display: block;
+width: 100px;
+height: 50px;
+border: 2px dashed blue;
+line-height: 50px;
+padding-left: 10%;
+margin: auto;
+
+    }
+</style>
+<body >
+  <div class="wrapper">
+    <h5>lab 7 : Drag & Drop </h5>
+    <p>Drag an item from right column to put into the left  </p>
+    <div class="main">
+    <div class="righc" id="bin">
+        
+    </div>
+     <div class="rightc"> 
+        <samp class="item" id="one"> ONE</samp>
+        <samp class="item" id="two"> two</samp>
+        <samp class="item" id="three"> three</samp>
+        <samp class="item" id="four"> four</samp>
+        <samp class="item" id="fire"> fire</samp>
+     </div>
+</div>
+</div>
+<script>
+    let item = document.getElementsByClassName("item");
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        item.setAttrribute("draggable",true);
+        item.addRventListener("draggstart",(e)=>{
+            e.dataTransfer.setData("itemId",item.id);
+        });
+        
+    }
+    let bin = document.getElementById("bin");
+    bin.addEventListener("dragover", (e) => {
+        if (e.preventDefault) e.preventDefault();
+    });
+
+    bin.addEventListener("drop", (e) =>{
+        let itemId = e.dataTransfer.getData("itemId");
+        let raggable = document.getElementById(itemId);
+        e.target.appendChild(raggable);
+    });
+</script>
+</body>
+</html>
